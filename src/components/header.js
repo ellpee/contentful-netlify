@@ -12,7 +12,7 @@ background: transparent;
 overflow: hidden;
 position: relative;
 margin-bottom: 1.45rem;
-height: 120vh;
+height: ${({isHome}) => (isHome ? '120vh' : '20vh')};
 h1 {
   img {
     height: 50px;
@@ -31,36 +31,41 @@ position: relative;
 
 export default class Header extends Component {
   componentDidUpdate = (prevProps, prevState) => {
-    if(this.props.location.pathname === '/') {
-      this.wrapper.animate([
-        { height: "20vh" },
-        { height: "70vh" }
-      ], {
-        duration: 300,
-        fill: "forwards",
-        easing: "cubic-bezier(0.86, 0, 0.07, 1)",
-        iterations: 1
-      })
+    const { location } = this.props;
+    if(location.pathname != prevProps.location.pathname) {
+      if(this.props.location.pathname === '/') {
+        this.wrapper.animate([
+          { height: "20vh" },
+          { height: "120vh" }
+        ], {
+          duration: 300,
+          fill: "forwards",
+          easing: "cubic-bezier(0.86, 0, 0.07, 1)",
+          iterations: 1
+        })
       // Come back here an use the reverse function in the
       // web animation API later
-    } else {
-      this.wrapper.animate([
-        { height: "70vh" },
-        { height: "20vh" }
-      ], {
-        duration: 300,
-        fill: "forwards",
-        easing: "cubic-bezier(0.86, 0, 0.07, 1)",
-        iterations: 1
-      })
+      } else {
+        this.wrapper.animate([
+          { height: "120vh" },
+          { height: "20vh" }
+        ], {
+          duration: 300,
+          fill: "forwards",
+          easing: "cubic-bezier(0.86, 0, 0.07, 1)",
+          iterations: 1
+        })
+      }
     }
   };
 
   render() {
-    const { data} = this.props;
+    const { data, location } = this.props;
     return (
-      <div>
-      <HeaderWrapper ref={wrapper => (this.wrapper = ReactDOM.findDOMNode(wrapper))}>
+      <HeaderWrapper
+      isHome={location.pathname === '/'}
+      ref={wrapper => (this.wrapper = ReactDOM.findDOMNode(wrapper))}
+      >
         <HeaderContainer>
           <h1 style={{ margin: 0 }}>
             <Link
@@ -94,7 +99,6 @@ export default class Header extends Component {
         }}
         sizes={data.background.sizes} />
       </HeaderWrapper>
-      </div>
     )
   }
 }
