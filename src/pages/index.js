@@ -18,23 +18,26 @@ export default IndexPage
 export const query = graphql `
   query SiteMeta {
     site {
-      siteMetadata {
-        title
-        desc
+    siteMetadata {
+      title
+      desc
+    }
+  }
+  allMarkdownRemark {
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          date(formatString: "MMMM DD YYYY")
+        }
+        html
+        excerpt(pruneLength: 280)
+        fields {
+          slug
+        }
       }
     }
-    allMarkdownRemark {
-   edges {
-     node {
-       id
-       frontmatter {
-         title
-         date(formatString: "MMMM DD YYYY")
-       }
-       html
-       excerpt(pruneLength: 280)
-     }
-   }
- }
   }
+}
 `;
