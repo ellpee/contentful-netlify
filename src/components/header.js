@@ -32,7 +32,17 @@ position: relative;
 export default class Header extends Component {
   componentDidUpdate = (prevProps, prevState) => {
     if(this.props.location.pathname === '/') {
-      console.log(this.wrapper);
+      this.wrapper.animate([
+        { height: "20vh" },
+        { height: "70vh" }
+      ], {
+        duration: 300,
+        fill: "forwards",
+        easing: "cubic-bezier(0.86, 0, 0.07, 1)",
+        iterations: 1
+      })
+      // Come back here an use the reverse function in the
+      // web animation API later
     } else {
       this.wrapper.animate([
         { height: "70vh" },
