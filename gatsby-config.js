@@ -3,6 +3,7 @@ module.exports = {
     title: 'Lenora Porter - Product Designer',
     desc: "A collection of UX design resources from Lenora Porter"
   },
+  pathPrefix: "/Portfolio-Blog",
   plugins: ['gatsby-plugin-react-helmet',
             'gatsby-plugin-styled-components',
             {
