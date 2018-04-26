@@ -26,6 +26,26 @@ maxWidth: 960px;
 padding: 1.45rem 1.0875rem;
 z-index: 2;
 position: relative;
+display: flex;
+justify-content: space-between;
+`;
+
+const MainNav = styled.nav`
+ul {
+  list-style: none;
+  display: flex;
+  li {
+    margin-left: 10px;
+    font-family: san-serif;
+    a {
+      text-decoration: none;
+      color: white;
+      &:hover {
+        border-bottom: 3px solid white;
+      }
+    }
+  }
+}
 `;
 
 
@@ -78,7 +98,7 @@ export default class Header extends Component {
               // logo
             </Link>
           </h1>
-          <nav>
+          <MainNav>
             <ul>
               <li>
                 <Link to="/">Home</Link>
@@ -87,7 +107,7 @@ export default class Header extends Component {
                 <Link to="/about">About</Link>
               </li>
             </ul>
-          </nav>
+          </MainNav>
         </HeaderContainer>
         <Img
         style={{
