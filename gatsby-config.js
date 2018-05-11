@@ -4,7 +4,15 @@ module.exports = {
     desc: "A collection of UX design resources from Lenora Porter"
   },
   pathPrefix: "/Portfolio-Blog",
-  plugins: ['gatsby-plugin-react-helmet',
+  plugins: [
+            {
+              resolve: 'gatsby-source-contentful',
+              options: {
+                spaceId: "dvfdooscfcqf",
+                accessToken: "4a5745e169ee8eed664d8bd92c5274d5831533840afe73bd05232723e0f4b8f9"
+              }
+            },
+            'gatsby-plugin-react-helmet',
             'gatsby-plugin-styled-components',
             {
                 resolve: "gatsby-source-filesystem",
@@ -27,16 +35,9 @@ module.exports = {
                   path: `${__dirname}/static/assets`
                 }
             },
-            {
-                resolve: 'gatsby-transformer-remark',
-                options: {
-                  excerpt_separator: `<!-- end -->`
-                }
-            },
             'gatsby-transformer-sharp',
             'gatsby-plugin-sharp',
-            'gatsby-transformer-remark',
-            'gatsby-plugin-netlify-cms'
+            'gatsby-transformer-remark'
           ],
 };
 

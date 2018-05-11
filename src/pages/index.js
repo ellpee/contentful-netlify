@@ -7,7 +7,7 @@ const IndexPage = ({ data }) => (
   <div>
     <h2>Writing</h2>
     <h5>My thoughts, my design process, and career.</h5>
-    {data.allMarkdownRemark.edges.map(({node}) => (
+    {data.allContentfulBlogPost.edges.map(({node}) => (
      <PostListing key={node.id} post={node} />
    ))}
   </div>
@@ -23,19 +23,18 @@ export const query = graphql `
       desc
     }
   }
-  allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC}) {
+  allContentfulBlogPost {
     edges {
       node {
+        title
+        body {
+    				childMarkdownRemark {
+             excerpt
+           }
+         }
+        createdAt(formatString: "MM DD, YYYY")
+        slug
         id
-        frontmatter {
-          title
-          date(formatString: "MMMM DD YYYY")
-        }
-        html
-        excerpt(pruneLength: 280)
-        fields {
-          slug
-        }
       }
     }
   }
