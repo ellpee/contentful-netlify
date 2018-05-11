@@ -1,13 +1,13 @@
 ---
 title: List of 20 designers to follow on Social Media
 date: '2017-09-09'
-image: /static/assets/listofdesigners.png
+image: /assets/listofdesigners.png
 ---
 As a designer, I try to immerse myself in User Experience Design. Whether you’re a beginner in the field or a seasoned vet, you need to be updated with the latest and greatest. I decided to share a few social media accounts that I follow religiously. I’m inspired daily just by clicking on their social media handles. Follow my leaders and enjoy.<!-- end -->
 
 Medium
 
-![The UX Blog](/static/assets/theuxblog.png)
+![The UX Blog](/assets/theuxblog.png)
 
 1. The UX Blog
 2. Invision
