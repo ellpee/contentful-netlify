@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import Work from "../images/work.png";
+import Journal from "../images/Journal.png";
+import Resources from "../images/Resources.png";
+import Contact from "../images/Contact.png";
 
 
 // import logo from '../images/logo.svg';
@@ -47,6 +51,61 @@ ul {
   }
 }
 `;
+
+const HeroContent = styled.nav`
+padding-top: 265px;
+padding-left: 25px;
+width: 600px;
+h1 {
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 45px;
+  color: #333333;
+}
+h4 {
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 24px;
+  color: #333333;
+}
+h5 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 18px;
+  color: #ECC54C;
+}
+h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 10px;
+  color: #333333;
+  text-align: center;
+}
+.intro-text {
+  margin-bottom: 132px;
+}
+.sub-menu {
+  display: inline;
+}
+.sub-menu-text{
+  float: left;
+  margin-top: 16px;
+}
+ul li {
+  display: inline-block;
+}
+li {
+  padding-left: 36px;
+}
+img {
+  margin-bottom: 6px;
+}
+`;
+
 
 
 export default class Header extends Component {
@@ -97,6 +156,33 @@ export default class Header extends Component {
             >
               // logo
             </Link>
+            <HeroContent>
+              <div className="intro-text">
+                <h1>Hello! I’m Lenora Porter and I am a Product Designer based in Miami, Florida.</h1>
+                <h5>READ MORE</h5>
+              </div>
+              <div className="sub-menu">
+                <h4 className="sub-menu-text">Skip To:</h4>
+                  <ul>
+                    <li>
+                      <img src={Work} class="sub-menu-icons" />
+                      <h6>WORK</h6>
+                    </li>
+                    <li>
+                      <img src={Journal} class="sub-menu-icons" />
+                      <h6>JOURNAL</h6>
+                    </li>
+                    <li>
+                      <img src={Resources} class="sub-menu-icons" />
+                      <h6>RESOURCES</h6>
+                    </li>
+                    <li>
+                      <img src={Contact} class="sub-menu-icons" />
+                      <h6>CONTACT</h6>
+                    </li>
+                  </ul>
+              </div>
+            </HeroContent>
           </h1>
           <MainNav>
             <ul>
