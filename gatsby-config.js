@@ -35,6 +35,19 @@ module.exports = {
                   path: `${__dirname}/static/assets`
                 }
             },
+            {
+                resolve: `gatsby-plugin-google-fonts`,
+                options: {
+                  fonts: [
+                    `Crimson Text`,
+                    `serif\:400,400i,600,600i` // you can also specify font weights and styles
+                  ],
+                  [
+                    `Open Sans`,
+                    `sans-serif\:400,400i,600,600i`
+                  ]
+                }
+              },
             'gatsby-transformer-sharp',
             'gatsby-plugin-sharp',
             'gatsby-transformer-remark'
