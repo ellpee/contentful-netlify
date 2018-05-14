@@ -42,7 +42,7 @@ module.exports = {
                     `Crimson Text`,
                     `serif\:400,400i,600,600i` // you can also specify font weights and styles
                   ],
-                  [
+                  fonts: [
                     `Open Sans`,
                     `sans-serif\:400,400i,600,600i`
                   ]
