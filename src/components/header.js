@@ -53,7 +53,7 @@ ul {
 `;
 
 const HeroContent = styled.nav`
-padding-top: 265px;
+padding-top: 200px;
 padding-left: 25px;
 width: 600px;
 h1 {
