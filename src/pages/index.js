@@ -2,10 +2,10 @@ import React from 'react'
 import Link from 'gatsby-link';
 import PostListing from '../components/Posts/PostListing';
 import './index.css';
-import SATO from "../images/SATO-Global-Solutions.png";
-import FYND from "../images/Fynd.png";
-import LIVENINJA from "../images/Liveninja.png";
-import DEVNOIR from "../images/Devnoir.png";
+import sato from "../images/sato.png";
+import fynd from "../images/fynd.png";
+import liveninja from "../images/liveninja.png";
+import devnoir from "../images/devnoir.png";
 
 
 const IndexPage = ({ data }) => (
@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => (
       <h5>Case Studies, Design Process, and Design Systems</h5>
       <ul>
         <li className="portfolio-entry">
-          <img src={SATO} className="portfolio-img" />
+          <img src={sato} className="portfolio-img" />
           <div className="portfolio-entry-text">
             <h5>From Agency to Platform Product</h5>
             <h6>How we evolved our one-off solutions into enterprise software</h6>
@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => (
         </li>
 
       <li className="portfolio-entry">
-        <img src={FYND} className="portfolio-img" />
+        <img src={fynd} className="portfolio-img" />
         <div className="portfolio-entry-text">
           <h5>User Experience Design Team of One</h5>
           <h6>Juggling UX, Marketing, and Web Development</h6>
@@ -31,7 +31,7 @@ const IndexPage = ({ data }) => (
       </li>
 
       <li className="portfolio-entry">
-        <img src={LIVENINJA} className="portfolio-img" />
+        <img src={liveninja} className="portfolio-img" />
         <div className="portfolio-entry-text">
           <h5>Evolving from startup to an acquired company</h5>
           <h6>Applying design thinking to design team management</h6>
@@ -39,7 +39,7 @@ const IndexPage = ({ data }) => (
       </li>
 
       <li className="portfolio-entry">
-        <img src={DEVNOIR} className="portfolio-img" />
+        <img src={devnoir} className="portfolio-img" />
         <div className="portfolio-entry-text">
           <h5>Growing a Miami Tech Community</h5>
           <h6>How Two Techies Immersed themselves in the needs of the commmunity</h6>
