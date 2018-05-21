@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import work from '../images/work.png';
-import journal from '../images/journal.png';
-import resources from '../images/resources.png';
-import contact from '../images/contact.png';
+// import work from '../images/work.png';
+// import journal from '../images/journal.png';
+// import resources from '../images/resources.png';
+// import contact from '../images/contact.png';
 
 
 // import logo from '../images/logo.svg';
@@ -165,19 +165,19 @@ export default class Header extends Component {
                 <h4 className="sub-menu-text">Skip To:</h4>
                   <ul>
                     <li>
-                      <img src={work} class="sub-menu-icons" />
+                      <img src="#" class="sub-menu-icons" />
                       <h6>WORK</h6>
                     </li>
                     <li>
-                      <img src={journal} class="sub-menu-icons" />
+                      <img src="#" class="sub-menu-icons" />
                       <h6>JOURNAL</h6>
                     </li>
                     <li>
-                      <img src={resources} class="sub-menu-icons" />
+                      <img src="#" class="sub-menu-icons" />
                       <h6>RESOURCES</h6>
                     </li>
                     <li>
-                      <img src={contact} class="sub-menu-icons" />
+                      <img src="#" class="sub-menu-icons" />
                       <h6>CONTACT</h6>
                     </li>
                   </ul>
